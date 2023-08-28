@@ -23,6 +23,18 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.abilities = abilities;
     pokemon.ability = ability;
 
+    const moves = pokeDetail.moves.map((moveSlot) => moveSlot.move.name);
+    const [move] = moves;
+
+    pokemon.moves = moves;
+    pokemon.move = move;
+
+    const stats = pokeDetail.stats.map((statSlot) => statSlot.base_stat);
+    const [stat] = stats;
+
+    pokemon.stats = stats;
+    pokemon.stat = stat;
+
     return pokemon;
 }
 
@@ -34,7 +46,6 @@ pokeApi.getPokemonDetail = async (pokemon) => {
     }catch(e){
         console.log(e);
     }
-    
 }
 
 pokeApi.getPokemons = async (offset = 0, limit = 5) => {
@@ -50,5 +61,4 @@ pokeApi.getPokemons = async (offset = 0, limit = 5) => {
     }catch(e){
         console.log(e);
     }
-    
 }

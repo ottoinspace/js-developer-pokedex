@@ -146,9 +146,240 @@
     border-radius: 1rem;
 }
 
+.pagination button:hover {
+    background-color: #4d57a2;
+}
+
+.pokemon {
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.pokemon:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    height: 66%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.pokemonHeader {
+    padding: .8rem 2rem 2rem 2rem;
+    background-position: 100% 130%;
+    background-size: 20rem;
+    background-repeat: no-repeat;
+}
+
+.pokemonHeader button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.pokemonHeader button img {
+    height: 3rem;
+}
+
+.photo {
+    max-width: 100%;
+    height: 141px;
+}
+
+.infos {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; 
+}
+
+.card .number {
+    display: flex;
+    color: #fff;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.card .name {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: .25rem;
+    font-weight: bolder;
+}
+
+.cardDetails {
+    background-color: #fff;
+    position: fixed;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    padding: 30px;
+}
+
+.cardMenu { 
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    align-items: baseline;   
+}
+
+.cardMenu button:hover { 
+    color: #000000;
+}
+
+hr {
+    margin-top: 20px;
+    opacity: .2;
+}
+
+.cardMenu button { 
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(167, 167, 167);
+}
+
+.card .detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .detail .types {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+    list-style: none;
+}
+
+.card .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    line-height: 30px;
+    font-size: 1rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text-gray{
+    color: rgb(167, 167, 167);
+}
+
+.text-black{
+    color: #000;
+}
+
+.selected{
+    color: #000 !important;
+    border-bottom: 3px solid #187fe7 !important;
+    padding-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.health-bar {
+    width: 200px;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bar-red {
+    background: #c54;
+    width: 100%;
+    height: 5px;
+    position: relative;
+}
+
+.bar-green {
+    background: rgb(30, 155, 50);
+    width: 100%;
+    height: 5px;
+    position: relative;
+ }
+
+.moves {
+    line-height: 1.4rem;
+    height: 41vh;
+    overflow-y: scroll;
+ }
+
+.moves table {
+    text-align: left;
+    padding: 0 10px;
+    width: 100%;
+ }
+
+.moves::-webkit-scrollbar {
+    width: 0.15em;
+}
+ 
+.moves::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.moves::-webkit-scrollbar-thumb {
+  background-color: #999;
+  outline: 1px solid #999;
+}
+
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .photo {
+        height: 166px;
+    }
+
+    .cardDetails {
+        height: 66vh;
+    }
+
+    .moves {
+        height: 38vh;
+    }
+
+    .about div {
+        gap: 10px;
     }
 }
 
@@ -156,10 +387,42 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .photo {
+        height: 120px;
+    }
+
+    .cardDetails {
+        height: 90vh;
+    }
+
+    .moves {
+        height: 50vh;
+    }
+
+    .about div {
+        gap: 20px;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .photo {
+        height: 120px;
+    }
+
+    .cardDetails {
+        height: 120vh;
+    }
+
+    .moves {
+        height: 70vh;
+    }
+
+    .about div {
+        gap: 30px;
     }
 }

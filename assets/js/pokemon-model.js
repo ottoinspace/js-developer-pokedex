@@ -1,4 +1,3 @@
-
 class Pokemon {
     number;
     name;
@@ -10,9 +9,7 @@ class Pokemon {
     weight;
     ability;
     abilities = [];
+    move;
     moves = [];
     stats = [];
-    description;
-    generation;
-    eggGroups = [];
 }
